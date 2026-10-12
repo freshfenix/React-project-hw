@@ -1,0 +1,120 @@
+.app {
+  display: grid;
+  min-height: 100vh;
+  padding: 32px 0;
+  place-items: center;
+  transition: background-color 240ms ease, color 240ms ease;
+}
+
+.color-panel {
+  width: min(100% - 40px, 680px);
+  margin: auto;
+  padding: clamp(28px, 6vw, 64px);
+  border: 1px solid rgb(255 255 255 / 45%);
+  border-radius: 28px;
+  background: rgb(255 255 255 / 72%);
+  box-shadow: 0 24px 70px rgb(35 44 80 / 14%);
+  backdrop-filter: blur(14px);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #645cf4;
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.color-panel h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  letter-spacing: -0.055em;
+  line-height: 1.08;
+}
+
+.description {
+  max-width: 42ch;
+  margin: 16px auto 0;
+  opacity: 0.76;
+  line-height: 1.65;
+}
+
+.control-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 36px;
+}
+
+.control-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 18px;
+  border: 1px solid #e9eaf0;
+  border-radius: 16px;
+  background: rgb(255 255 255 / 72%);
+  text-align: left;
+}
+
+.control-label {
+  display: grid;
+  gap: 4px;
+}
+
+.control-label strong {
+  font-size: 0.98rem;
+}
+
+.control-label span {
+  opacity: 0.72;
+  font-size: 0.84rem;
+}
+
+.color-button {
+  flex: 0 0 auto;
+  min-width: 116px;
+  padding: 11px 15px;
+  border: 0;
+  border-radius: 11px;
+  color: #fff;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 160ms ease, filter 160ms ease;
+}
+
+.color-button:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
+
+.color-button:focus-visible {
+  outline: 3px solid #242a3a;
+  outline-offset: 3px;
+}
+
+.color-value {
+  margin-top: 28px;
+  opacity: 0.72;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 520px) {
+  .color-panel {
+    width: min(100% - 28px, 680px);
+    padding: 28px 20px;
+    border-radius: 22px;
+  }
+
+  .control-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .color-button {
+    width: 100%;
+  }
+}
